@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Search.module.css";
-import { ReactComponent as SearchIcon } from "../../assests/search-icon.svg";
+import { ReactComponent as SearchIcon } from "../../assests/Search-icon.svg";
 
 function Search({ placeholder }) {
     const onSubmit = (e) => {
