@@ -1,9 +1,9 @@
 // import logo from './logo.svg';
 // import './App.css';
 
-import { Outlet } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import Navbar from "./components/Navbar/Navbar";
+import { Outlet } from "react-router-dom";
 import { fetchNewAlbums, fetchSongs, fetchTopAlnums } from "./api/api";
 
 
