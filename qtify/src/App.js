@@ -1,15 +1,38 @@
 // import logo from './logo.svg';
 // import './App.css';
 
-
-import Hero from "./components/Hero/Hero";
+import { Outlet } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
 import Navbar from "./components/Navbar/Navbar";
+import { fetchNewAlbums, fetchSongs, fetchTopAlnums } from "../../api/api";
+
+
+
 
 function App() {
+  const [searchData, useSearchData] = useState();
+    const [data, setData] = useState({});
+    const generateData = (key, source) => {
+        source().then((data) => {
+            setData((prevData) => {
+                return {...prevData, [key]: data};
+            })
+        })
+    }
+
+    useEffect(() => {
+        generateData("topAlbums", fetchTopAlnums);
+        generateData("newAlbums", fetchNewAlbums);
+        generateData("songs", fetchSongs);
+    }, []);
+    const {topAlbums = [], newAlbums = [], songs = []} = data;
+
   return (
     <>
-      <Navbar/>
-      <Hero/>
+      <div>
+          <Navbar />
+          <Outlet context={{ data: {topAlbums, newAlbums, songs}}} />
+      </div>
     </>
 
   );
