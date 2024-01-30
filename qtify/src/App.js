@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Navbar from "./components/Navbar/Navbar";
-import { Routes, Route } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { fetchNewAlbums, fetchSongs, fetchTopAlnums } from "./api/api";
 
 
@@ -31,7 +31,7 @@ function App() {
     <>
       <div>
           <Navbar />
-          <Route context={{ data: {topAlbums, newAlbums, songs}}} />
+          <Outlet context={{ data: {topAlbums, newAlbums, songs}}} />
       </div>
     </>
 
