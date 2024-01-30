@@ -4,7 +4,7 @@
 import { Outlet } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import Navbar from "./components/Navbar/Navbar";
-import { fetchNewAlbums, fetchSongs, fetchTopAlnums } from "../../api/api";
+import { fetchNewAlbums, fetchSongs, fetchTopAlnums } from "./api/api";
 
 
 
