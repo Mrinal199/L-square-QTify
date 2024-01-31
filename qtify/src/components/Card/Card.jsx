@@ -14,10 +14,13 @@ function Card({ data, type }) {
                 <div className={styles.wrapper}>
                     <div className={styles.card}>
                         <img src={image} alt="album" loading="lazy" />
+                        <div className={styles.banner}>
                         <Chip 
                             label={`${follows} Follows`} 
                             size="small" 
-                            className={styles.chip} />
+                            className={styles.chip} 
+                          />
+                          </div>
                     </div>
                     <div className={styles.titleWrapper}>
                         <p>{title}</p>

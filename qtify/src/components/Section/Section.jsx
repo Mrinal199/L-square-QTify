@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Section.module.css";
-import { Card, CircularProgress } from "@mui/material";
+import {  CircularProgress } from "@mui/material";
+import Card from "../Card/Card";
 
 
 export default function Section ({ title, data, type}) {
