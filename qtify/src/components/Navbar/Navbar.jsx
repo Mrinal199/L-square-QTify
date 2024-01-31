@@ -11,7 +11,7 @@ function Navbar() {
         <Link to="/">
             <Logo/>
         </Link>
-        <Search placeholder={ "Search a album of your choice" } />
+        <Search placeholder= "Search a album of your choice"  />
         <Button>Give Feedback</Button>
     </nav>
     )

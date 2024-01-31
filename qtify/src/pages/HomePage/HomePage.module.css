@@ -1,6 +1,6 @@
 .wrapper {
     padding: 0px 30px 60px 30px;
-    display: flex;
+    display: contents;
     flex-direction: coloum;
     gap: 32px;
 }
