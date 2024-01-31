@@ -20,13 +20,13 @@ export default function Section ({ title, data, type}) {
             {data.length === 0 ? (
                 <CircularProgress />
             ) : (
-                <div className={styles.cardWrapper}>
-                    {!carouselToggle ? (
-                        <div className={styles.wrapper}>
-                        {data.map((ele) => (
-                            <Card data = {ele} type={type} />
-                        ))}
-                </div>
+                        <div className={styles.cardWrapper}>
+                            {!carouselToggle ? (
+                                <div className={styles.wrapper}>
+                                {data.map((ele) => (
+                                    <Card data = {ele} type={type} />
+                                ))}
+                               </div>
                     ):(
                        <Carousel
                                 data={data}
