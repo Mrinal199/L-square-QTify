@@ -1,8 +1,8 @@
 .rightNavigation {
-    padding: absolute;
-    right:  0px;
-    top: 40%;
-    transform: translate(-50%);
-    z-index: 10;
     cursor: pointer;
-}
+    padding: absolute;
+    right:  10px;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 10;
+} 
