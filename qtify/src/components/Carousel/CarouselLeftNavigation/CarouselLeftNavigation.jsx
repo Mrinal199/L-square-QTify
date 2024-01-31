@@ -1,8 +1,18 @@
 
 import React, { useEffect, useState } from "react";
-import styles from "./CarouselLeftNavigation.module.css";
-import { ReactComponent as LeftArrow } from "./../../../assests/LeftArrow.svg";
+
+import { ReactComponent as LeftArrow } from "../../../../assests/LeftArrow.svg";
 import { useSwiper } from "swiper/react"
+
+
+
+
+
+import styles from "./CarouselLeftNavigation.module.css";
+
+
+
+
 
 
 function CarouselLeftNavigation() {
