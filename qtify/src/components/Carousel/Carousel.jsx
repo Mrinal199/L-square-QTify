@@ -26,13 +26,16 @@ function Carousel ({ data , renderComponent }) {
                 
                 style = {{padding: "0px 20px"}}
                  modules={[Navigation]}
+                 initialState={0}
                 spaceBetween={40}               
                 slidesPerView={"auto"}
                 allowTouchMove
                 >
                     <Controls  data={data} />
-                    <CarouselRightNavigation />
+                    <div className={styles.navbarShow}>
                     <CarouselLeftNavigation />
+                    <CarouselRightNavigation />
+                    </div>
                     {data.map((ele, index) => (
                         <SwiperSlide key={ele.id || index}>{renderComponent(ele)}</SwiperSlide>
                     ))}
